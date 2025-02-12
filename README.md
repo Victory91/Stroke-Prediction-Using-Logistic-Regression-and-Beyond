@@ -46,7 +46,7 @@ Review the results and visualizations in the notebook
 ```markdown
 stroke-prediction-model/
 ├── data/
-│   └── stroke_data.csv
+│   └── healthcare_dataset_stroke_data
 ├── notebooks/
 │   ├── 1_data_preprocessing_and_eda.ipynb
 │   ├── 2_multiple_linear_regression.ipynb
