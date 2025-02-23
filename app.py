@@ -18,9 +18,9 @@ avg_glucose_level = st.slider("avg_glucose_level", min_value=0, max_value=500, v
 
 if st.button("Predict"):
   # take the stroke value, and format the value the right way
-    y_pred = model1.predict([[age, bmi, avg_glucose_level]])[0].round(0)
+   model1_test_pred = model1.predict([[age, bmi, avg_glucose_level]])[0].round(0)
   # Map the prediction to the corresponding message
-if y_pred == 1:
+if model1_test_pred == 1:
       status = "Stroke Event"
 else:
       status = "No Stroke Event"
