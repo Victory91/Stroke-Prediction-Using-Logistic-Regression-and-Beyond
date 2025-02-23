@@ -17,18 +17,18 @@ avg_glucose_level = st.slider("avg_glucose_level", min_value=0, max_value=500, v
 
 model1 = GradientBoostingClassifier()
 model1.fit(np.array([[age, bmi, avg_glucose_level]]), np.array([0]))
-y_pred = model1.predict([[age, bmi, avg_glucose_level]])[0].round(0)
+
 
 # After selecting stroke, the user then submits the stroke value
 
 if st.button("Predict"):
   # take the stroke value, and format the value the right way
-
+        y_pred = model1.predict([[age, bmi, avg_glucose_level]])[0].round(0)
   # Map the prediction to the corresponding message
 if y_pred == 1:
-    status = "Stroke Event"
+        status = "Stroke Event"
 else:
-    status = "No Stroke Event"
+        status = "No Stroke Event"
 
 # Display the result on the Streamlit app
 st.write("The predicted stroke status is", status)
