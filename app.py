@@ -26,4 +26,4 @@ else:
     status = "No Stroke Event"
 
 # Display the result on the Streamlit app
-  st.write("The predicted stroke status is", status)
+st.write("The predicted stroke status is", status)
