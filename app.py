@@ -15,9 +15,6 @@ age = st.slider("age", min_value=0, max_value=100, value=0)
 bmi = st.slider("bmi", min_value=0, max_value=100, value=10)
 avg_glucose_level = st.slider("avg_glucose_level", min_value=0, max_value=500, value=50)
 
-model1 = GradientBoostingClassifier()
-model1.fit(np.array([[age, bmi, avg_glucose_level]]), np.array([0]))
-
 
 # After selecting stroke, the user then submits the stroke value
 
